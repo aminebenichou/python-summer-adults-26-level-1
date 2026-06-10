@@ -20,3 +20,15 @@ students = [
     {"id": 19, "name": "Sam Yilmaz", "age": 20, "grade": "A", "major": "Computer Science", "gpa": 3.65},
     {"id": 20, "name": "Tara Obi", "age": 23, "grade": "C", "major": "Economics", "gpa": 2.9},
 ]
+
+a_students = []
+for element in students:
+    if element['grade']=='A':
+        a_students.append(element)
+
+
+
+with open("aStudents.txt", "w", encoding="utf-8") as file:
+    for student in a_students:
+        file.write(str(student))
+   
